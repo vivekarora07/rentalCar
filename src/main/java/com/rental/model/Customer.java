@@ -1,14 +1,17 @@
 package com.rental.model;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
+@Builder
 public class Customer {
     private Long customerId;
-    private String firstName;
-    private String lastName;
-    private String address;
-    private int phoneNo;
-    private int age;
+    @EqualsAndHashCode.Exclude private String firstName;
+    @EqualsAndHashCode.Exclude private String lastName;
+    @EqualsAndHashCode.Exclude private Long phoneNo;
+    private String email;
+    @EqualsAndHashCode.Exclude private int age;
 
 }
