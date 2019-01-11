@@ -24,6 +24,12 @@ reservation end datetime should be 1 day ahead of reservation start date time
 
 10. There is initializeRentalCars function which loads  when RentalSystem domain singleton object is created. It contains total count of availablecars, vehicleType and zipcode. We can load from filesystem or in memory DB
 
+VehicleType |VehicleCount |PickupZipCode
+  SEDANS	  | 3 		 | 19701
+  SUVS      | 10		 | 19701 
+  TRUCKS    | 30		 | 19701
+  VANS      | 40		 | 19701
+
 11. There is isRentalAvailable API which returns tru/false based on isIntervalReservationExistsForCustomerId function , getIntervalReservationsByVehicleTypeZipCode function > total available car count check
 
 12. There is returnCustomerId which returns new or existing customerId based on email check. Same email for existing customer and new email for new customer
